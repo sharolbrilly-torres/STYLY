@@ -1,0 +1,82 @@
+{
+  "entities": {
+    "users": {
+      "title": "User",
+      "description": "User profile with role and preferences",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "customer"] },
+        "phone": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["email", "role"]
+    },
+    "products": {
+      "title": "Product",
+      "description": "Clothing product for men and women",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "gender": { "type": "string", "enum": ["dama", "caballero", "unisex"] },
+        "category": { "type": "string" },
+        "style": { "type": "string" },
+        "price": { "type": "number" },
+        "originalPrice": { "type": "number" },
+        "sizes": { "type": "array", "items": { "type": "string" } },
+        "colors": { "type": "array", "items": { "type": "object" } },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "inStock": { "type": "boolean" },
+        "stockCount": { "type": "number" },
+        "featured": { "type": "boolean" },
+        "rating": { "type": "number" },
+        "reviewsCount": { "type": "number" }
+      },
+      "required": ["name", "gender", "category", "price", "sizes", "colors", "images"]
+    },
+    "orders": {
+      "title": "Order",
+      "description": "Customer purchase order",
+      "type": "object",
+      "properties": {
+        "orderNumber": { "type": "string" },
+        "customerId": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerEmail": { "type": "string" },
+        "customerPhone": { "type": "string" },
+        "shippingAddress": { "type": "object" },
+        "items": { "type": "array", "items": { "type": "object" } },
+        "subtotal": { "type": "number" },
+        "shippingFee": { "type": "number" },
+        "discount": { "type": "number" },
+        "total": { "type": "number" },
+        "paymentMethod": { "type": "string" },
+        "paymentStatus": { "type": "string" },
+        "orderStatus": { "type": "string" },
+        "trackingCode": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["orderNumber", "customerEmail", "items", "total", "paymentMethod", "orderStatus"]
+    },
+    "pqrs": {
+      "title": "PQRS Ticket",
+      "description": "Customer requests, complaints, claims and suggestions",
+      "type": "object",
+      "properties": {
+        "ticketNumber": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerEmail": { "type": "string" },
+        "customerPhone": { "type": "string" },
+        "type": { "type": "string" },
+        "subject": { "type": "string" },
+        "messages": { "type": "array", "items": { "type": "object" } },
+        "status": { "type": "string" },
+        "orderId": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["ticketNumber", "customerEmail", "type", "status", "messages"]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Aura & Elegance",
+  "description": "E-commerce exclusivo de moda para dama y caballero con filtros avanzados, carrito, pagos, gestión de pedidos y chat PQRS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

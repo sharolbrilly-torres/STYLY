@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Editorial Aesthetic Design Tokens */
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.text-editorial-gold {
+  color: #D4AF37;
+}
+
+.bg-editorial-gold {
+  background-color: #D4AF37;
+}
+
+.border-editorial-gold {
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+.bg-editorial-olive {
+  background-color: #556B2F;
+}
+
+.bg-editorial-olive-dark {
+  background-color: #3D4D22;
+}
+
+.bg-editorial-rose {
+  background-color: #FADADD;
+}
+
+.bg-editorial-rose-soft {
+  background-color: rgba(250, 218, 221, 0.2);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #E6CA65 0%, #D4AF37 50%, #B38E22 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom subtle editorial scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
